@@ -7,10 +7,13 @@
     <title>Document</title>
     <link href="/dist/output.css" rel="stylesheet">
 </head>
-<body class=" flex justify-center bg-green-800">
+<body class=" flex flex-col justify-center >
+    <!-- Source reference : https://jevelin.shufflehound.com/creative-agency/ -->
     <div class="container">
-        <nav class=" flex justify-between px-7 py-7 bg-yellow-200">
-            <div class="nav-start bg-blue-400">
+
+        <!-- =========================== NAVBAR =========================== -->
+        <nav id="top-navbar" class=" flex justify-around items-center py-4 fixed top-0 w-full">
+            <div class="nav-start">
                 <h1 class=" text-2xl font-bold">Javelin CA</h1>
             </div>
             <div class="nav-end">
@@ -19,16 +22,20 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </div>
-                <div class=" hidden lg:block bg-red-400">
-                    <ul class=" flex">
+                <div class=" hidden lg:block">
+                    <ul class=" flex items-center">
                         <li class=" pr-7 font-semibold">Home</li>
                         <li class=" pr-7 font-semibold">Services</li>
                         <li class=" pr-7 font-semibold">Project</li>
                         <li class=" pr-7 font-semibold">Team</li>
                         <li class=" pr-7 font-semibold">Partners</li>
                         <li class=" pr-7 font-semibold">Contacts</li>
-                        <li class=" pr-7 font-semibold">f</li>
-                        <li class=" pr-7 font-semibold">t</li>
+                        <li class=" pr-7 font-semibold">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 320 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+                        </li>
+                        <li class=" pr-7 font-semibold">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M128,88c0-22,18.5-40.3,40.5-40a40,40,0,0,1,36.2,24H240l-32.3,32.3A127.9,127.9,0,0,1,80,224c-32,0-40-12-40-12s32-12,48-36c0,0-64-32-48-120,0,0,40,40,88,48Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/></svg>
+                        </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="gray" stroke-width="1">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -38,6 +45,34 @@
                 </div>
             </div>
         </nav>
+
+        <div class=" bg-blue-300 h-screen bg-main-orange bg-no-repeat bg-cover">
+            <span class=" flex justify-around mt-80">
+                <div class="">
+                    <p class=" text-7xl font-extrabold">CREATIVE</p>
+                    <p class=" text-7xl font-extrabold">AGENCY</p>
+                </div>
+                <div></div>
+            </span>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
+
+    <script>
+
+        //Navbar Change UI based on Scroll Event
+        document.addEventListener('scroll', function(e) { 
+            console.log(document.scrollingElement.scrollTop)
+            if (document.scrollingElement.scrollTop !== 0){
+                document.getElementById('top-navbar').style.backgroundColor = "white"
+                document.getElementById('top-navbar').style.paddingTop = "16px"
+            } else {
+                document.getElementById('top-navbar').style.backgroundColor = "transparent"
+                document.getElementById('top-navbar').style.paddingTop = "32px"
+            }
+        }
+        )
+    </script>
+
 </body>
 </html>
