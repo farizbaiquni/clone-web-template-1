@@ -3,29 +3,29 @@
 @tailwind utilities;
 
 @keyframes animationTextLeftToRight1 {
-    0% {
-        transform: translate(-90px) rotate(120deg);
-    }
-    100% {
-        transform: translate(0) rotate(360deg);
-    }
+  0% {
+    transform: translate(-90px) rotate(120deg);
+  }
+  100% {
+    transform: translate(0) rotate(360deg);
+  }
 }
 
 @keyframes animationTextLeftToRight2 {
-    0% {
-        transform: translate(-80px) rotate(120deg);
-    }
-    100% {
-        transform: translate(0) rotate(360deg);
-    }
+  0% {
+    transform: translate(-80px) rotate(120deg);
+  }
+  100% {
+    transform: translate(0) rotate(360deg);
+  }
 }
 
 .text-anim-1 {
-    animation-name: animationTextLeftToRight1; 
-    transition-timing-function: ease-out;
+  animation-name: animationTextLeftToRight1;
+  transition-timing-function: ease-out;
 }
 
 .text-anim-2 {
-    animation-name: animationTextLeftToRight2; 
-    transition-timing-function: ease-out;
+  animation-name: animationTextLeftToRight2;
+  transition-timing-function: ease-out;
 }
